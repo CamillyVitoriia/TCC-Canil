@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10em;
+    background: #326127;
+    margin: 1em 0 0 0;
+    padding: 1em 1em 2em 1em;
+  }
+
+  .footer p {
+    font-size: 1.5em;
+    color: #fafafa;
+    font-style: italic;
+  }

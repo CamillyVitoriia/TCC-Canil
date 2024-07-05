@@ -1,0 +1,280 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 14vh;
+}
+
+@media screen and (min-width: 20em) {
+
+    header {
+        position: fixed;
+        z-index: 990;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 10px 0;
+        border-bottom: 2px solid #fff;
+        background-color: #58af58;
+    }
+
+    #logo {
+        height: 6em;
+        width: 6em;
+    }
+
+    #menu-hamburguer {
+        cursor: pointer;
+    }
+
+    #menu-hamburguer img {
+        width: 2em;
+        height: 2em;
+    }
+
+    #menu-lateral {
+        position: fixed;
+        top: 0;
+        right: -50px;
+        width: 80%;
+        height: 100%;
+        background-color: #58af58;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        color: #fff;
+    }
+
+    .fechar-menu {
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .fechar-menu img {
+        top: 1em;
+        width: 2em;
+        height: 2em;
+    }
+
+    #menu-lateral ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    #menu-lateral ul li {
+        margin-bottom: 20px;
+        padding-bottom: 1em;
+        margin-right: 50px;
+        border-bottom: 2px solid #fff
+    }
+
+    #menu-lateral ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #menu-lateral ul li a:hover {
+        color: green;
+    }
+
+
+    #menu-lateral .button-header {
+        margin: auto 2em;
+    }
+
+    #menu-lateral .button-header button {
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        border: 1px solid #054905;
+        background-color: #326127;
+        color: #eee;
+    }
+
+    #menu-lateral .button-header button:hover {
+        cursor: pointer;
+        border: 1px solid #eee;
+        color: #326127;
+        background-color: #eee;
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+
+    .listaNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .liButton span {
+        margin: 1em 2em;
+    }
+
+    .liButton button {
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        width: 8em;
+        border: 1px solid #054905;
+        background-color: #326127;
+        color: #eee;
+        padding: 0.75em;
+    }
+
+    .liButton button:hover {
+        cursor: pointer;
+        border: 1px solid #eee;
+        color: #326127;
+        background-color: #eee;
+    }
+
+    #menu-social a {
+        color: transparent;
+    }
+
+    #menu-social img {
+        width: 3em;
+        margin: 10px;
+        border-radius: 3%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0.623);
+        transition: transform .3s, border 1s;
+    }
+
+}
+
+@media screen and (min-width: 48em) {
+
+    .flex {
+        height: 16vh;
+    }
+
+    #logo {
+        height: 10em;
+        width: 10em;
+    }
+
+    #menu-hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu-hamburguer.active+#menu-lateral {
+        right: 0;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+
+    .flex {
+        width: 100%;
+        margin: 0 1em;
+    }
+
+    #logo {
+        height: 6em;
+        width: 6em;
+    }
+
+    #menu-hamburguer {
+        display: none;
+    }
+
+    .nomeDesk {
+        color: #054905;
+        padding: 0 0.5em;
+    }
+
+    .nomeMobile {
+        display: none;
+    }
+
+    .menuDesktop {
+        display: flex;
+        margin: 0;
+    }
+
+    header {
+        font-size: 20px;
+    }
+
+    header i {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    header ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    header ul li {
+        display: inline-block;
+        margin: 0 1.2em;
+    }
+
+    .listaNav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .liButton {
+        margin: 0 1m 0 0;
+        /* padding: 0 1em 0 0; */
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #58af58;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0;
+    }
+
+    nav p {
+        display: block;
+        font-weight: bold;
+        color: #30542e;
+        /* width: 200px; */
+        font-size: 30px;
+    }
+
+    ::selection {
+        color: white;
+        background: green;
+    }
+
+    #menu-lateral .button-header {
+        display: none;
+    }
+
+    .listaNav {
+        padding: 0 0em;
+    }
+
+    section#redes-sociais {
+        text-align: left;
+        margin-left: 1em;
+    }
+
+    section#redes-sociais img {
+        width: 3%;
+        margin: 5px 10px 0;
+        border-radius: 3%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0.623);
+        transition: transform .3s, border 1s;
+    }
+
+}

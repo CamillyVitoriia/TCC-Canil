@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #000000;
+}
+
+.containerdois {
+  max-width: 2280px;
+  margin: auto;
+}
+
+body {
+  min-height: 100vh;
+  justify-content: center;
+  background-image: linear-gradient(to right, #66b633, #b8e497);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 14vh;
+}
+
+@media screen and (min-width: 20em) {
+
+  header {
+    position: fixed;
+    z-index: 990;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+    background-color: #58af58;
+  }
+
+  #logo {
+    height: 6em;
+    width: 6em;
+  }
+
+  #menu-hamburguer {
+    cursor: pointer;
+  }
+
+  #menu-hamburguer img {
+    width: 2em;
+    height: 2em;
+  }
+
+  #menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -50px;
+    width: 80%;
+    height: 100%;
+    background-color: #58af58;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  .fechar-menu {
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .fechar-menu img {
+    top: 1em;
+    width: 2em;
+    height: 2em;
+  }
+
+  #menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  #menu-lateral ul li {
+    margin-bottom: 20px;
+    padding-bottom: 1em;
+    margin-right: 50px;
+    border-bottom: 2px solid #fff
+  }
+
+  #menu-lateral ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  #menu-lateral ul li a:hover {
+    color: green;
+  }
+
+  #menu-lateral .button-header{
+    margin-top: 2em;
+    margin-right: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #menu-lateral .button-header button{
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: 1px solid #054905;
+    background-color: #35c041;
+    color: #eee;
+  }
+
+
+  .menuDesktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 48em) {
+
+  .flex {
+    height: 16vh;
+  }
+
+  #logo {
+    height: 10em;
+    width: 10em;
+  }
+
+  #menu-hamburguer {
+    display: block;
+    cursor: pointer;
+  }
+
+  #menu-hamburguer.active+#menu-lateral {
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+
+  #logo {
+    height: 6em;
+    width: 6em;
+  }
+
+  #menu-hamburguer {
+    display: none;
+  }
+
+  .nomeMobile {
+    display: none;
+  }
+
+  .menuDesktop {
+    display: flex;
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  header i {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  header ul {
+    list-style-type: none;
+  }
+
+  header ul li {
+    display: inline-block;
+    margin: 0 40px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #58af58;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 40px;
+  }
+
+  nav p {
+    display: block;
+    font-weight: bold;
+    color: #30542e;
+    width: 200px;
+    font-size: 30px;
+  }
+
+  ::selection {
+    color: white;
+    background: green;
+  }
+
+}
+
+
+@media screen and (min-width: 20em) {
+  .container {
+    margin: 10em auto;
+    width: 100%;
+    height: 650px;
+    background: #58af58;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .container {
+    margin: 20vh auto;
+    width: 52%;
+    height: 650px;
+    background: #58af58;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .container {
+    margin: 22vh auto;
+    width: 30%;
+    height: 650px;
+    background: #58af58;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+  }
+}
+
+.container header {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+  color: #054905;
+  ;
+
+}
+
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .form-outer form {
+  display: flex;
+  width: 400%;
+}
+
+.form-outer form .page {
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 500;
+  color: black;
+}
+
+.form-outer form .page .field {
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+
+form .page .field .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+}
+
+form .page .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  color: #000;
+}
+
+form .page .field select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #054905;
+  ;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+  background: #0b770b;
+}
+
+form .page .btns button {
+  margin-top: -20px !important;
+}
+
+form .page .btns button.prev {
+  margin-right: 3px;
+  font-size: 17px;
+}
+
+form .page .btns button.next {
+  margin-left: 3px;
+}
+
+.container .progress-bar {
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+
+.container .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.container .progress-bar .step p {
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+  border-color: #054905;
+  ;
+  background: #054905;
+  ;
+}
+
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+
+.progress-bar .step .bullet.active:after {
+  background: #054905;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+
+.progress-bar .step p.active {
+  color: #054905;
+  transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.progress-bar .step .check.active {
+  display: block;
+  color: #054905;
+}
