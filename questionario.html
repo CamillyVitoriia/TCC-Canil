@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>canil osasco</title>
+  <link rel="icon" type="image/png" href="img/pawprint.png" />
+  <link rel="stylesheet" type="text/css" href="css/quest.css" media="screen">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+  <!------------- Começa o Header ----------------->
+  <header id="header">
+    <div class="containerdois">
+      <div class="flex">
+        <a href="doacaopets.html"><img src="img/erick_3Bi_2.ico" alt="" id="logo"></a>
+        <nav class="menuDesktop">
+          <h2 class="nomeDesk">
+            <p>CANIL<br>OSASCO</p>
+          </h2>
+          <ul>
+            <li>
+              <a href="quemomos.html" rel="noopener noreferrer"><strong>QUEM SOMOS</strong></a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/" rel="noopener noreferrer"><strong>QUERO ADOTAR</strong></a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/" rel="noopener noreferrer"><strong>VOLUNTÁRIO</strong></a>
+            </li>
+            <li>
+              <a href="politicaprivacdade.html" rel="noopener noreferrer"><strong>POLÍTICA DE <br>
+                  PRIVACIDADE</strong></a>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="nomeMobile">
+          <p>CANIL OSASCO</p>
+        </h2>
+        <!-- Menu Hamburguer -->
+        <div id="menu-hamburguer">
+          <div class="bar"><img src="./img/menu.png" /></div>
+        </div>
+        <!-- Menu Lateral -->
+        <div id="menu-lateral">
+          <span id="fechar-menu" class="fechar-menu"><img src="./img/close.png" /></span>
+          <ul>
+            <li>
+              <a href="quemomos.html" rel="noopener noreferrer">QUEM SOMOS</a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/" rel="noopener noreferrer">QUERO ADOTAR</a>
+            </li>
+            <li>
+              <a href="voluntarios.html" rel="noopener noreferrer"><strong>VOLUNTÁRIO</strong></a>
+            </li>
+            <li>
+              <a href="politicaprivacdade.html" rel="noopener noreferrer">POLÍTICA DE PRIVACIDADE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!------------- Acaba o Header ----------------->
+
+  <div class="container">
+    <h2>Questionário</h2>
+    <div class="progress-bar">
+      <div class="step">
+        <p>social</p>
+        <div class="bullet">
+          <span>1</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Local</p>
+        <div class="bullet">
+          <span>2</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Residencia</p>
+        <div class="bullet">
+          <span>3</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Pets</p>
+        <div class="bullet">
+          <span>4</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+    </div>
+    <div class="form-outer">
+
+
+      <form action="php/questionarioAdocao.php" method="POST">
+        <div class="page slide-page">
+          <div class="title">social</div>
+          <div class="field">
+            <div class="label">Ocupação</div>
+            <input type="text" name="Ocupacao" id="Ocupacao">
+          </div>
+          <div class="field">
+            <div class="label">Renda</div>
+            <select name="Renda" id="Renda">
+              <option value="">selecionar</option>
+              <option value="Até R$1.800,00">Até R$1.800,00</option>
+              <option value="Entre R$1.801 até R$2.600,00">Entre R$1.801 até R$2.600,00</option>
+              <option value="Entre R$2.601 até R$4.000,00">Entre R$2.601 até R$4.000,00</option>
+            </select>
+          </div>
+          <div class="field">
+            <button type="button" class="firstNext next" id="firstNext">Próximo</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">Local</div>
+          <div class="field">
+            <div class="label">Possue portão ou muro?</div>
+            <select name="PossuiPortaoOuMuro" id="PossuiPortaoOuMuro">
+              <option value="">selecionar</option>
+              <option value="Não">Não</option>
+              <option value="Sim">Sim</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="label">O pet vivera dentro ou fora de casa?</div>
+            <select name="PetDentroOuForaDeCasa" id="PetDentroOuForaDeCasa">
+              <option value="">selecionar</option>
+              <option value="Dentro">Dentro</option>
+              <option value="Fora">Fora</option>
+            </select>
+          </div>
+          <div class="field btns">
+            <button type="button" class="prev-1 prev">Anterior</button>
+            <button type="button" class="next-1 next">Próximo</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">Residencia</div>
+          <div class="field">
+            <div class="label">imovel</div>
+            <select name="TipoDeImovel" id="TipoDeImovel">
+              <option value="">selecionar</option>
+              <option value="apartamento">apartamento</option>
+              <option value="sitio">sitio</option>
+              <option value="casa">casa</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="label">tipo</div>
+            <select name="TipoDePropriedade" id="TipoDePropriedade">
+              <option value="">selecionar</option>
+              <option value="Proprio">Proprio</option>
+              <option value="Alugado">Alugado</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="label">Proteção em janelas/sacadas</div>
+            <select name="ProtecaoEmJanelasSacadas" id="ProtecaoEmJanelasSacadas">
+              <option value="">selecionar</option>
+              <option value="Não">não</option>
+              <option value="Sim">sim</option>
+            </select>
+          </div>
+          <div class="field btns">
+            <button type="button" class="prev-2 prev">Anterior</button>
+            <button type="button" class="next-2 next">Próximo</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">Pets/Crianças</div>
+          <div class="field">
+            <div class="label">tem outros pets</div>
+            <select name="TemOutrosPets" id="TemOutrosPets">
+              <option value="">selecionar</option>
+              <option value="Não">Não</option>
+              <option value="Sim, Cachorro">Sim, Cachorro</option>
+              <option value="Sim, Gato">Sim, Gato</option>
+              <option value="Sim, Outros">Sim, Outros</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="label">Tem Criança na casa?</div>
+            <select name="TemCriancaNaCasa" id="TemCriancaNaCasa">
+              <option value="">selecionar</option>
+              <option value="Não">não</option>
+              <option value="Sim">sim</option>
+            </select>
+          </div>
+          <div class="field btns">
+            <button type="button" class="prev-3 prev">Anterior</button>
+            <button type="submit" class="submit" id="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+
+      
+    </div>
+  </div>
+</body>
+
+<script src="java/questionario.js"></script>
+<script src="java/munu.js"></script>
+
+
+</html>
